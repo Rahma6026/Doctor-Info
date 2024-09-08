@@ -1,0 +1,388 @@
+
+/* why choose
+doctor slider
+surgery availables
+services : ambulance */
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #e2e2e2;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    background-color: rgb(9, 102, 102);
+    color: white;
+}
+ul {
+    display: flex;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-inline: 20px;
+}
+ul li a:hover{
+    color: black;
+    border-bottom: 2px solid black;
+}
+.logo {
+    cursor: pointer;
+    color: rgb(226, 70, 43);
+    position: relative;
+    left: 0%;  
+    top: 50%;  
+    height: 60px;
+    width: 250px;
+    display: inline-block;
+    overflow: hidden;
+    transform: translateY(0);
+}
+.logo:before {
+    content: "";
+    height: 200%;
+    width: 200%;
+    position: absolute;
+    background: conic-gradient(
+      #fe9000,
+      #fff020,
+      #3edf4b,
+      #3363ff,
+      #b102b7,
+      #fd004c
+);
+    left:-25%;
+    top: -25%;
+    animation: spin 1.5s infinite linear;
+}
+@keyframes spin {
+    100% {
+      transform: rotate(-360deg);
+    }
+}
+  
+.logo:after {
+    content: "HEALTHINSIGHT";
+    position: absolute;
+    background-color: whitesmoke;
+    height: 93%;
+    width: 99%;
+    top: 3.5%;
+    left: 3.5%;
+    border-radius: 5px;
+    font-family: 'Poppins',Arial;
+    color:#000;
+    font-size: 20px;
+    letter-spacing: 5px;
+    display: grid;
+    place-items: center;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(15, 128, 128);
+    color: white;
+    padding: 20px;
+    margin-top: 55px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 50px; 
+}
+
+.col-md-3 {
+    flex: 1 1 calc(20% - 30px); 
+    max-width: 200px; 
+    min-width: 130px; 
+    margin-bottom: 15px;
+}
+
+.departments-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: rgb(9, 102, 102);
+    border: 2px solid rgb(9, 102, 102);
+    border-radius: 8px;
+    width: 60%; 
+    height: 60px; 
+    text-align: center;
+    font-size: 14px; 
+    padding: 10px; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.departments-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .col-md-3 {
+        flex: 1 1 calc(50% - 30px); 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .col-md-3 {
+        flex: 1 1 calc(60% - 20px); 
+    }
+}
+
+.mainText button{
+    width: 140px;
+    height: 40px;
+    border: none;
+    margin-top: 22px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.mainText button:hover{
+    border: 2px solid black;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+     
+}
+.doctors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    width: 300px;
+    height: 380px;
+    background-color: #fff;
+    margin-inline: 20px;
+    border-radius: 4px;
+    margin-top: 22px;
+}
+.card img{
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+}
+.card p{
+    margin-top: 11px;
+    margin-left: 11px;
+}
+
+
+.head{
+    text-align: center;
+    padding: 80px;
+}
+
+.surgery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.surgeryCard{
+    text-align: center;
+    width: 300px;
+    background-color: white;
+    margin-inline: 20px;
+    padding: 20px;
+    margin-top: 22px;
+}
+.surgeryCard img{
+    width: 100px;
+}
+.surgeryCard p{
+    margin-top: 12px;
+}
+.patients{
+    width: 800px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+
+}
+.patientCard{
+    display: flex; 
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 1s ease;
+}
+.patientCard img{
+     width: 350px;
+     margin-inline: 11px;
+     border-radius: 5px;
+     
+}
+ 
+.contact{
+    width: 300px;
+    background-color: #fff;
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+.contact h1{
+    
+    color: rgb(9, 77, 77);
+}
+.contact input{
+    width: 90%;
+    padding: 9px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #e2e2e2;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 66px;
+    color: white;
+    margin-top: 66px;
+    background-color: rgb(6, 51, 51);
+
+}
+.text p{
+    margin-top: 12px;
+}
+
+.about{
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    right: 50%;
+    width: 500px;
+    transform: translate(-50%, 40%);
+    background-color: #fff;
+    border-radius:11px;
+
+}
+/* About Us Section */
+.aboutDetail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.aboutDetail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.aboutDetail p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1100px) {
+    .main {
+        text-align: center;
+        display: block;
+        height: auto;
+    }
+    .mainText {
+        margin-top: 115px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    ul {
+        display: none;
+    }
+    #bar {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .patients {
+        width: 90%;
+    }
+    .patientCard img {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mainText h1 {
+        font-size: 33px;
+    }
+    .main img {
+        width: 90%;
+    }
+    .content {
+        width: 90%;
+    }
+    .contentDetail img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .patientCard img {
+        width: 40%;
+        height: 200px;
+        margin-inline: 8px;
+    }
+    .contact {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contentDetail img {
+        width: 50%;
+        height: 200px;
+    }
+    .contentDetail {
+        display: block;
+        text-align: center;
+    }
+    .contentDetail h1 {
+        font-size: 22px;
+    }
+    .contentDetail p {
+        font-size: 15px; /* Corrected from 15bpx to 15px */
+    }
+}
