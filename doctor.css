@@ -1,8 +1,4 @@
 
-/* why choose
-doctor slider
-surgery availables
-services : ambulance */
 *{
     margin: 0%;
     padding: 0%;
@@ -192,28 +188,10 @@ ul li a:hover{
 .head{
     text-align: center;
     padding: 80px;
+    margin-top: 50px; 
 }
-.speciality{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.speciality .spCard{
-    width: 300px;
-    padding: 22px;
-    background-color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 22px;
 
-    margin-inline: 20px;
-}
-.spCard img{
-    width: 200px;
-}
-.spCard p{
-    margin-top: 11px;
-}
+
 .reviews{
     width: 800px;
     height: 400px;
@@ -235,36 +213,34 @@ ul li a:hover{
     margin-inline: 18px;
     border-radius: 4px;
 }
-.contact{
-    width: 300px;
-    background-color: #fff;
-    padding: 22px;
-    border-radius: 4px;
-    text-align: center;
-    margin: auto;
+.about-us{
+        width: 80%;
+        margin: auto;
+        padding-top: 80px;
+        padding-bottom: 50px;
 }
-.contact input{
-    width: 90%;
-    font-size: 18px;
-    padding: 9px;
-    margin-top: 22px;
-    border: none;
-    outline: none;
-    background-color: #e4e1e1;
-    border-radius: 2px;
+.about-col{
+       flex-basis: 48%;
+        padding: 30px 2px;
 }
-.contact button{
-    width: 100px;
-    height: 30px;
-    background-color: rgb(13, 71, 98);
-    color: white;
-    font-size: 17px;
-    border: none;
-    margin-top: 22px;
+.about-col img{
+    width: 100%;
 }
-.contact h1{
-    color: rgb(16, 68, 103);
+.about-col hl{
+    padding-top: 0;
 }
+.about-col p{
+    padding:15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+    }
+.red-btn:hover{
+    color: #fff;
+}
+
 .footer{
     display: flex;
     flex-wrap: wrap;
@@ -277,71 +253,82 @@ ul li a:hover{
 .text p{
     margin-top: 12px;
 } 
-.detail{
-    display: none;
+.detail {
+    display: none; /* Hidden by default */
     position: fixed;
+    top: 50%;
     left: 50%;
-    right: 50%;
-    top: 5%;
-    transform: translate(-50%, 40%);
-    background-color: #fff;
-    padding: 22px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
     width: 400px;
-    border-radius: 4px;
-     
+    z-index: 1000; /* Ensure it's on top */
 }
-.content{
+
+.content {
     display: flex;
-    gap: 22px;
+    gap: 20px;
 }
-.content img{
-    width: 200px;
-    height: 250px;
+
+.content img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
 }
-.content p{
-    margin-top: 22px;
+
+.contentText {
+    flex-grow: 1;
 }
-.detail button{
-    position: relative;
-    top: -23px;
-    left: -22px;
-    width: 30px;
-    height: 30px;
-    background-color: rgb(12, 94, 94);
-    color: white;
-    font-size: 18px;
+
+.detail button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: skyblue;
+    color: black;
     border: none;
-    border-radius: 4px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
 }
+.icons.fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    }
+
 #bar{
     display: none;
     font-size: 26px;
 }
+
+
 @media screen and (max-width:1100px){
     .main{
         display: block;
         text-align: center;
-        /* height: auto; */
+        /*height: auto;*/ 
     }
     .mainText h1{
-        margin-top: 76px;
+       margin-top: 70px;
     }
+    ul li{
+        display: block;
+        }
+    
 }
 
-@media screen and (max-width:900px){
-    ul{
-        display: none;
-    }
-    #bar{
-        display: block;
-    }
-}
+
+
 
 @media screen and (max-width:850px){
     .reviews{
-        width: 90%;
-         
+        width: 90%;    
     }
     .patientReview img{
         width: 40%;
@@ -353,12 +340,7 @@ ul li a:hover{
     .mainText h1{
         font-size: 33px;
     }
-    .mainText h3{
-        font-size: 23px;
-    }
-    .main img{
-        width: 90%;
-    }
+
     .reviews{
         width: 80%;
     }
@@ -366,9 +348,6 @@ ul li a:hover{
         width: 40%;
         height: 160px;
         margin-inline: 6px;
-    }
-    .contact{
-        width: 80%;
     }
     .detail{
         width: 80%;
