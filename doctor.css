@@ -295,7 +295,7 @@ ul li a:hover{
     height: 50px;
     cursor: pointer;
 }
-.icons.fa{
+.icons  .fa{
     color: #f44336;
     margin: 0 13px;
     cursor: pointer;
